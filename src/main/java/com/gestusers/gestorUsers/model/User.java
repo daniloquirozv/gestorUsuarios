@@ -37,6 +37,9 @@ public class User {
     @Column(nullable = false)
     private String lastName;
 
-    private Boolean enables = true;
+    @Column(nullable = false)
+    private Boolean enabled = true;
+
+    
 
 }
