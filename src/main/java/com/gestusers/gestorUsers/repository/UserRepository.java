@@ -16,8 +16,8 @@ import feign.Param;
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByUsername(String username);
     Optional<User> findByEmail(String email);
-    Boolean existByUsername(String username);
-    Boolean existByEmail(String email);
+    Boolean existsByUsername(String username);
+    Boolean existsByEmail(String email);
 
     @Query("Select u from User u join u.roles r where r.name = :rolename")
     List<User> findByRoleName(@Param("rolename") Role.RoleName roleName);
